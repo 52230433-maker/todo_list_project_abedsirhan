@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS todo_app;
+USE todo_app;
+
+CREATE TABLE IF NOT EXISTS tasks (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    priority VARCHAR(10) DEFAULT 'Medium',
+    is_done TINYINT(1) DEFAULT 0,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
